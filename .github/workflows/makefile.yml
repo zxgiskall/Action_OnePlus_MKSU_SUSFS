@@ -1,0 +1,27 @@
+名字: Makefile CI
+
+在:
+推:
+分支: [ "main" ]
+query为空pull_request:
+分支: [ "main" ]
+
+工作:
+建筑:
+
+    runs-on: ubuntu-latest
+
+步骤:
+    - 用途: actions/checkout@v4
+
+    - 名字: 配置
+跑: ./configure
+
+    - 名字: 安装依赖项
+跑: 制作
+
+    - 名字: 运行检查
+跑: 做检查
+
+    - 名字: 运行distcheck
+跑: 做检查
